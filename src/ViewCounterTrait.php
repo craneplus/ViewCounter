@@ -1,5 +1,5 @@
 <?php
-namespace Fraank\ViewCounter;
+namespace CounterPackage\ViewCounter;
 trait ViewCounterTrait {
   /**
    * Return the most liked content
