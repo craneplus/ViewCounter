@@ -1,0 +1,7 @@
+{
+    "name": "example/view-counter",
+    "description": "A view and like counter extension for your laravel project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
