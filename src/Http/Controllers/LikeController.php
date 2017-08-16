@@ -1,6 +1,6 @@
 <?php
 
-namespace CounterPackage\ViewCounter;
+namespace Craneplus\ViewCounter;
 
 use App\Http\Controllers\Controller;
 
