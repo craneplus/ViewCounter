@@ -13,7 +13,7 @@
       "src"
     ],
     "psr-4": {
-      "CounterPackage\\ViewCounter\\": "src/"
+      "Craneplus\\ViewCounter\\": "src/"
     }
   }
 }
