@@ -1,5 +1,5 @@
 <?php
-namespace CounterPackage\ViewCounter;
+namespace Craneplus\ViewCounter;
 trait ViewCounterTrait {
   /**
    * Return the most liked content
