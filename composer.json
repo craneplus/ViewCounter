@@ -1,7 +1,20 @@
 {
-    "name": "example/view-counter",
+    "name": "craneplus/view-counter",
     "description": "A view and like counter extension for your laravel project",
     "license": "MIT",
+    "homepage": "https://github.com/craneplus/view-counter",
+    "keywords": [ "counter", "likes", "views" ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+    	"php": ">=5.6.4",
+    	"illuminate/support": "5.4.*"
+    },
+     "autoload": {
+    "classmap": [
+      "src"
+    ],
+    "psr-4": {
+      "CounterPackage\\ViewCounter\\": "src/"
+    }
+  }
 }
