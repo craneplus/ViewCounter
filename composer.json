@@ -2,7 +2,7 @@
     "name": "craneplus/view-counter",
     "description": "A view and like counter extension for your laravel project",
     "license": "MIT",
-    "homepage": "https://github.com/craneplus/view-counter",
+    "homepage": "https://github.com/craneplus/ViewCounter",
     "keywords": [ "counter", "likes", "views" ],
     "require": {
     	"php": ">=5.6.4",
