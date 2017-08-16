@@ -1,6 +1,6 @@
 <?php
 
-namespace craneplus\view-counter;
+namespace CounterPackage\ViewCounter;
 
 use Illuminate\Database\Eloquent\Model;
 
