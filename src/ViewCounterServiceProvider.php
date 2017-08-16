@@ -1,6 +1,6 @@
 <?php
 
-namespace CounterPackage\ViewCounter;
+namespace Craneplus\ViewCounter;
 
 use Illuminate\Support\ServiceProvider;
 
