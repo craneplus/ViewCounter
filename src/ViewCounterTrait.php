@@ -28,13 +28,13 @@ trait ViewCounterTrait {
     if(!isset($this->counter))
     {
       $class_name = snake_case(get_class($this));
-      $this->counter = \Fraank\ViewCounter\Counter::firstOrCreate(array('class_name' => $class_name, 'object_id' => $this->id));
+      $this->counter = \Craneplus\ViewCounter\Counter::firstOrCreate(array('class_name' => $class_name, 'object_id' => $this->id));
     }
     return $this->counter;
   }
   public function user_counters()
   {
-    return $this->hasMany('\Fraank\ViewCounter\UserCounter', 'object_id')->where('class_name', snake_case(get_class($this)));
+    return $this->hasMany('\Craneplus\ViewCounter\UserCounter', 'object_id')->where('class_name', snake_case(get_class($this)));
   }
   /**
    * Return authentificated users who viewed we know
