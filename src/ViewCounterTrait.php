@@ -23,7 +23,7 @@ trait ViewCounterTrait {
       ->whereClassName(snake_case(get_class($this)))
       ->orderBy('counter.view_counter', 'DESC');
   }
-  public function counter()
+  public function counters()
   {
     if(!isset($this->counter))
     {
@@ -56,12 +56,12 @@ trait ViewCounterTrait {
           'user_id' => \Auth::user()->id,
           'action' => 'view'
         ));
-        $this->counter()->increment('view_counter');
+        $this->counters()->increment('view_counter');
         
         return true;
       } else {
         \Session::put($this->get_view_key(), time());
-        $this->counter()->increment('view_counter');
+        $this->counters()->increment('view_counter');
         
         return true;
       }
@@ -75,7 +75,7 @@ trait ViewCounterTrait {
    */
   public function views_count()
   {
-    return $this->counter()->view_counter;
+    return $this->counters()->view_counter;
   }
   /**
    * Is object already viewed by user?
@@ -136,12 +136,12 @@ trait ViewCounterTrait {
           'user_id' => \Auth::user()->id,
           'action' => 'like'
         ));
-        $this->counter()->increment('like_counter');
+        $this->counters()->increment('like_counter');
         
         return true;
       } else {
         \Session::put($this->get_like_key(), time());
-        $this->counter()->increment('like_counter');
+        $this->counters()->increment('like_counter');
         
         return true;
       }
@@ -166,12 +166,12 @@ trait ViewCounterTrait {
           'user_id' => \Auth::user()->id,
           'action' => 'like'
         ))->delete();
-        $this->counter()->decrement('like_counter');
+        $this->counters()->decrement('like_counter');
         
         return true;
       } else {
         \Session::forget($this->get_like_key());
-        $this->counter()->decrement('like_counter');
+        $this->counters()->decrement('like_counter');
         
         return true;
       }
@@ -185,7 +185,7 @@ trait ViewCounterTrait {
    */
   public function likes_count()
   {
-    return $this->counter()->like_counter;
+    return $this->counters()->like_counter;
   }
   /**
    * Is object already liked by user?
