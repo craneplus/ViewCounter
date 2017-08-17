@@ -26,7 +26,7 @@ class ViewCounterServiceProvider extends ServiceProvider
     public function register()
     {
         include __DIR__.'/Http/routes.php';
-        $this->app->make('CounterPackage\ViewCounter\LikeController');
+        $this->app->make('Craneplus\ViewCounter\LikeController');
     }
     /**
    * Get the services provided by the provider.
